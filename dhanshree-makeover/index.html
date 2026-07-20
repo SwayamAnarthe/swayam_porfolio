@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DHANSHREE MAKEOVER — Luxury Beauty Studio, Vaijapur</title>
+<meta name="description" content="Dhanshree Makeover — Vaijapur's Premium Bridal Makeup Studio. Luxury bridal makeup, HD makeup, airbrush, hairstyling, saree draping & more.">
+<meta name="keywords" content="bridal makeup vaijapur, dhanshree makeover, bridal studio, hd makeup, airbrush makeup, bridal packages, maharashtra">
+<meta property="og:title" content="DHANSHREE MAKEOVER — Luxury Beauty Studio">
+<meta property="og:description" content="Vaijapur's Premium Bridal Makeup Studio. Transforming Beauty Into Confidence.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#8b5a5f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+body { -webkit-overflow-scrolling: touch; overscroll-behavior: none; }
+
+:root {
+  --rose-gold: #e8b4b8;
+  --rose-gold-dark: #c98a8f;
+  --champagne: #f7e7ce;
+  --champagne-light: #fdf6ed;
+  --pearl: #f8f4f0;
+  --pearl-white: #fefcf9;
+  --luxury-pink: #f2d5d8;
+  --crystal-silver: #e8e8ec;
+  --lavender: #d5cfe0;
+  --warm-gold: #d4a853;
+  --gold-light: #f0d68a;
+  --gold-dark: #b8860b;
+  --gold: #c9a84c;
+  --deep-blush: #c47a7f;
+  --cream: #fff8f0;
+  --bg-dark: #1a0f12;
+  --bg-mid: #2d181e;
+  --shadow: rgba(0,0,0,0.4);
+  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-dark);
+  color: var(--pearl-white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* === BG === */
+.bg-layer {
+  position: fixed; inset: 0; z-index: 0;
+  background: radial-gradient(ellipse at 20% 0%, #3d1f28 0%, #1a0f12 35%, #0f080a 100%);
+  overflow: hidden; pointer-events: none;
+}
+.bg-layer::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(212,168,83,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 30% 60%, rgba(232,180,184,0.06) 0%, transparent 40%),
+    radial-gradient(circle at 70% 80%, rgba(213,207,224,0.04) 0%, transparent 40%);
+}
+.bg-layer::after {
+  content: ''; position: absolute; inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.005) 2px, rgba(255,255,255,0.005) 3px);
+}
+.bg-orb {
+  position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.35;
+  animation: orbFloat 25s ease-in-out infinite;
+}
+.bg-orb:nth-child(1) { width: 800px; height: 800px; top: -300px; left: -200px; background: radial-gradient(circle, rgba(212,168,83,0.2), transparent); }
+.bg-orb:nth-child(2) { width: 700px; height: 700px; top: 15%; right: -300px; background: radial-gradient(circle, rgba(232,180,184,0.18), transparent); animation-delay: -8s; }
+.bg-orb:nth-child(3) { width: 600px; height: 600px; bottom: -200px; left: 15%; background: radial-gradient(circle, rgba(213,207,224,0.12), transparent); animation-delay: -16s; }
+.bg-orb:nth-child(4) { width: 450px; height: 450px; top: 45%; left: 40%; background: radial-gradient(circle, rgba(212,168,83,0.08), transparent); animation-delay: -4s; }
+
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(50px, -40px) scale(1.06); }
+  50% { transform: translate(-30px, 25px) scale(0.94); }
+  75% { transform: translate(40px, 15px) scale(1.02); }
+}
+
+/* === PARTICLES === */
+#particles-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+
+/* === FLOATING DIAMONDS === */
+.float-elements { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.float-diamond {
+  position: absolute; width: 7px; height: 7px;
+  background: linear-gradient(135deg, var(--gold-light), var(--warm-gold));
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  opacity: 0; animation: diamondRise 18s linear infinite;
+  box-shadow: 0 0 12px rgba(212,168,83,0.4);
+}
+.float-diamond:nth-child(1) { left: 5%; animation-delay: 0s; }
+.float-diamond:nth-child(2) { left: 12%; animation-delay: 2.5s; animation-duration: 20s; }
+.float-diamond:nth-child(3) { left: 22%; animation-delay: 5.5s; animation-duration: 15s; }
+.float-diamond:nth-child(4) { left: 35%; animation-delay: 1.5s; }
+.float-diamond:nth-child(5) { left: 48%; animation-delay: 7.5s; animation-duration: 19s; }
+.float-diamond:nth-child(6) { left: 55%; animation-delay: 3.5s; animation-duration: 16s; }
+.float-diamond:nth-child(7) { left: 68%; animation-delay: 6.5s; }
+.float-diamond:nth-child(8) { left: 78%; animation-delay: 4.5s; animation-duration: 20s; }
+.float-diamond:nth-child(9) { left: 88%; animation-delay: 3s; animation-duration: 14s; }
+.float-diamond:nth-child(10) { left: 95%; animation-delay: 8.5s; animation-duration: 22s; }
+
+@keyframes diamondRise {
+  0% { opacity: 0; transform: translateY(105vh) rotate(0deg) scale(0); }
+  12% { opacity: 0.5; }
+  85% { opacity: 0.4; }
+  100% { opacity: 0; transform: translateY(-5vh) rotate(720deg) scale(1); }
+}
+
+/* === IOS 27 GLASS === */
+.ios-glass {
+  background: rgba(255, 248, 240, 0.08);
+  backdrop-filter: blur(40px) saturate(140%);
+  -webkit-backdrop-filter: blur(40px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 24px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.12), inset 0 -1px 0 rgba(255,255,255,0.04);
+  position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.ios-glass::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); z-index: 2;
+}
+.ios-glass::after {
+  content: ''; position: absolute; top: -60%; left: -30%; width: 160%; height: 80%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.05), transparent 60%);
+  transform: rotate(-10deg); pointer-events: none; z-index: 1;
+}
+.ios-glass:hover {
+  border-color: rgba(212,168,83,0.2);
+  box-shadow: 0 8px 50px rgba(212,168,83,0.1), 0 4px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.18);
+  transform: translateY(-2px);
+}
+.ios-glass-card {
+  background: rgba(255, 248, 240, 0.05);
+  backdrop-filter: blur(30px) saturate(130%);
+  -webkit-backdrop-filter: blur(30px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative; overflow: hidden;
+}
+.ios-glass-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+}
+.ios-glass-card:hover {
+  border-color: rgba(212,168,83,0.15);
+  box-shadow: 0 8px 40px rgba(212,168,83,0.08), 0 2px 20px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
+}
+
+/* === PRELOADER === */
+#preloader {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--bg-dark);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+#preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.preloader-logo { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; background: linear-gradient(135deg, var(--gold-light), var(--warm-gold), var(--gold-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 4px; }
+.preloader-sub { font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; color: var(--rose-gold); opacity: 0.5; margin-top: 4px; }
+.preloader-bar-outer { width: 220px; height: 3px; background: rgba(255,255,255,0.04); border-radius: 3px; margin-top: 24px; overflow: hidden; position: relative; }
+.preloader-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--rose-gold), var(--warm-gold), var(--gold-light)); border-radius: 3px; transition: width 0.3s ease; box-shadow: 0 0 12px rgba(212,168,83,0.3); }
+
+/* === NAV === */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 0 28px; height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(15,8,10,0.5); backdrop-filter: blur(50px) saturate(150%); -webkit-backdrop-filter: blur(50px) saturate(150%);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: var(--transition);
+}
+nav.scrolled { background: rgba(15,8,10,0.75); backdrop-filter: blur(60px) saturate(160%); border-bottom-color: rgba(212,168,83,0.06); }
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; white-space: nowrap; }
+.nav-logo-img { height: 40px; width: auto; display: block; filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255,255,255,0.3)); transition: var(--transition); }
+.nav-logo-img:hover { filter: brightness(0) invert(1) drop-shadow(0 0 14px rgba(255,255,255,0.5)); }
+.nav-logo-text { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(135deg, var(--gold-light), var(--warm-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.nav-logo-text small { font-size: 10px; font-family: 'Montserrat', sans-serif; font-weight: 300; letter-spacing: 3px; opacity: 0.6; display: block; -webkit-text-fill-color: var(--champagne); color: var(--champagne); }
+.nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+.nav-links a { text-decoration: none; color: rgba(255,255,255,0.5); font-size: 11px; font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 14px; border-radius: 20px; transition: var(--transition); white-space: nowrap; }
+.nav-links a:hover, .nav-links a.active { color: var(--pearl-white); background: rgba(255,255,255,0.06); }
+.nav-cta { background: linear-gradient(135deg, var(--warm-gold), var(--gold-dark)) !important; color: var(--bg-dark) !important; font-weight: 600 !important; padding: 8px 20px !important; box-shadow: 0 2px 12px rgba(212,168,83,0.2); }
+.nav-cta:hover { box-shadow: 0 6px 25px rgba(212,168,83,0.35) !important; transform: translateY(-2px); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--pearl-white); border-radius: 2px; transition: var(--transition); }
+.nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 5px); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -5px); }
+
+/* === SECTIONS === */
+.section { position: relative; z-index: 1; padding: 110px 28px 80px; max-width: 1100px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-label { font-size: 10px; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; color: var(--rose-gold); margin-bottom: 10px; opacity: 0.7; }
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4.5vw, 44px); font-weight: 700; color: var(--champagne); letter-spacing: 1px; }
+.section-title .highlight { background: linear-gradient(135deg, var(--gold-light), var(--warm-gold), var(--gold-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.section-sub { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.3); margin-top: 10px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+/* === HERO === */
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 28px 60px; position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; width: 100%; }
+.hero-left { position: relative; }
+
+.hero-brand { font-family: 'Playfair Display', serif; font-size: clamp(44px, 6.5vw, 76px); font-weight: 900; line-height: 1.0; letter-spacing: 3px; text-transform: uppercase; background: linear-gradient(180deg, #f0d68a 0%, #d4a853 35%, #b8860b 65%, #f0d68a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; filter: drop-shadow(0 2px 15px rgba(212,168,83,0.15)); }
+.hero-subtitle { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 2vw, 24px); font-weight: 300; letter-spacing: 8px; text-transform: uppercase; color: var(--champagne); margin-top: 6px; opacity: 0.6; }
+.hero-desc { font-size: 13px; font-weight: 300; line-height: 1.9; color: rgba(255,255,255,0.4); margin-top: 16px; max-width: 420px; }
+.hero-taglines { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 18px; }
+.hero-tagline { font-size: 11px; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; color: var(--rose-gold); opacity: 0.5; }
+.hero-buttons { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: 30px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; cursor: pointer; border: none; transition: var(--transition); }
+.btn-primary { background: linear-gradient(135deg, var(--warm-gold), var(--gold-dark)); color: var(--bg-dark); font-weight: 600; box-shadow: 0 4px 20px rgba(212,168,83,0.2); }
+.btn-primary:hover { box-shadow: 0 8px 35px rgba(212,168,83,0.35); transform: translateY(-2px); }
+.btn-outline { border: 1px solid rgba(255,255,255,0.10); color: var(--pearl-white); background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); }
+.btn-outline:hover { border-color: var(--warm-gold); background: rgba(212,168,83,0.08); transform: translateY(-2px); }
+
+/* === HERO RIGHT === */
+.hero-right { display: flex; justify-content: center; align-items: center; position: relative; }
+.hero-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(212,168,83,0.08); animation: ringSpin 25s linear infinite; }
+.hero-ring:nth-child(1) { width: 420px; height: 420px; }
+.hero-ring:nth-child(2) { width: 460px; height: 460px; border-style: dashed; animation-direction: reverse; animation-duration: 35s; border-color: rgba(232,180,184,0.06); }
+.hero-ring:nth-child(3) { width: 380px; height: 380px; border-color: rgba(212,168,83,0.04); animation-duration: 20s; }
+@keyframes ringSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.hero-portrait { width: 320px; height: 400px; border-radius: 16px; background: var(--bg-dark); border: 1px solid rgba(212,168,83,0.12); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06); }
+.hero-portrait .portrait-img { width:100%;height:100%;object-fit:contain;object-position:center;display:block; }
+.hero-portrait::after { content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.15), transparent 40%); pointer-events:none; }
+@keyframes portraitFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.portrait-glow { position: absolute; inset: 15px; border-radius: 50%; background: radial-gradient(circle, rgba(212,168,83,0.06), transparent 70%); animation: pulseGlow 3s ease-in-out infinite; }
+@keyframes pulseGlow { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.08); } }
+
+
+/* === SCROLL REVEAL === */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+.reveal-d4 { transition-delay: 0.4s; }
+.reveal-d5 { transition-delay: 0.5s; }
+
+/* === ABOUT === */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.about-visual { position: relative; display: flex; justify-content: center; }
+.about-circle { width: 320px; height: 320px; border-radius: 50%; border: 1px solid rgba(212,168,83,0.06); display: flex; align-items: center; justify-content: center; position: relative; }
+.about-circle-inner { width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(circle, rgba(255,248,240,0.03), transparent); display: flex; align-items: center; justify-content: center; font-size: 80px; border: 1px dashed rgba(212,168,83,0.04); overflow: hidden; }
+.about-circle-inner .bridal-icon { width:100%;height:100%;object-fit:contain;object-position:center;display:block;border-radius:50%; }
+.about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 25px; }
+.about-stat { text-align: center; padding: 18px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); border-radius: 14px; }
+.about-stat-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; background: linear-gradient(135deg, var(--gold-light), var(--warm-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.about-stat-label { font-size: 10px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 4px; }
+.about-text h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 600; color: var(--champagne); margin-bottom: 12px; }
+.about-text p { font-size: 13px; font-weight: 300; line-height: 1.9; color: rgba(255,255,255,0.4); margin-bottom: 12px; }
+
+/* === SERVICES === */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+.service-card { padding: 28px 16px; text-align: center; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); border-radius: 16px; transition: var(--transition); cursor: default; }
+.service-card:hover { background: rgba(212,168,83,0.04); border-color: rgba(212,168,83,0.12); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
+.service-icon { font-size: 32px; display: block; margin-bottom: 8px; }
+.service-name { font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--pearl-white); }
+.service-desc { font-size: 10px; font-weight: 300; color: rgba(255,255,255,0.25); margin-top: 6px; }
+
+/* === OFFERS === */
+.offers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.offer-card { padding: 24px 16px; text-align: center; background: linear-gradient(135deg, rgba(212,168,83,0.04), rgba(232,180,184,0.02)); border: 1px solid rgba(212,168,83,0.06); border-radius: 16px; transition: var(--transition); }
+.offer-card:hover { border-color: var(--warm-gold); box-shadow: 0 8px 30px rgba(212,168,83,0.08); transform: scale(1.02); }
+.offer-icon { font-size: 28px; display: block; margin-bottom: 6px; }
+.offer-name { font-size: 12px; font-weight: 500; color: var(--champagne); letter-spacing: 0.5px; }
+.offer-badge { display: inline-block; margin-top: 8px; padding: 3px 14px; border-radius: 12px; background: rgba(212,168,83,0.08); border: 1px solid rgba(212,168,83,0.08); font-size: 9px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-light); }
+
+/* === GALLERY - COLLAGE + TEXT SIDE-BY-SIDE === */
+.gallery-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-bottom: 30px; }
+.gallery-tab { padding: 8px 20px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); color: rgba(255,255,255,0.4); font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; transition: var(--transition); }
+.gallery-tab:hover { color: var(--pearl-white); border-color: rgba(255,255,255,0.1); }
+.gallery-tab.active { background: linear-gradient(135deg, var(--warm-gold), var(--gold-dark)); color: var(--bg-dark); font-weight: 600; border-color: transparent; box-shadow: 0 4px 15px rgba(212,168,83,0.2); }
+
+.gallery-layout { display: flex; gap: 30px; align-items: stretch; }
+
+/* ----- LEFT: COLLAGE ----- */
+.gallery-collage {
+  flex: 1.3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  min-height: 320px;
+}
+.gallery-item {
+  aspect-ratio: 1;
+  border-radius: 14px; overflow: hidden; position: relative;
+  border: 1px solid rgba(255,255,255,0.04);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: var(--transition);
+  min-height: 120px;
+  background: rgba(255,255,255,0.02);
+}
+.gallery-item.hidden { display: none; }
+.gallery-item:hover { border-color: rgba(212,168,83,0.15); transform: scale(1.02); z-index: 2; }
+.gallery-item .gallery-visual { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 36px; transition: var(--transition); overflow:hidden; }
+.gallery-item .gallery-visual img { width:100%;height:100%;object-fit:contain;object-position:center;transition:var(--transition);padding:4px; }
+.gallery-item .gallery-visual .placeholder { position:relative;z-index:1; }
+.gallery-item:hover .gallery-visual { transform: scale(1.02); }
+.gallery-visual-bg { position: absolute; inset: 0; background: radial-gradient(circle at 30% 30%, rgba(212,168,83,0.06), transparent 70%); transition: var(--transition); }
+.gallery-item:hover .gallery-visual-bg { opacity: 0.8; }
+.gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,6,8,0.7) 0%, transparent 50%); display: flex; align-items: flex-end; padding: 10px; opacity: 0; transition: var(--transition); }
+.gallery-item:hover .gallery-overlay, .gallery-item.touched .gallery-overlay { opacity: 1; }
+.gallery-overlay span { font-size: 9px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: var(--pearl-white); background: rgba(255,255,255,0.06); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 3px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); }
+
+/* ----- RIGHT: TEXT PANEL ----- */
+.gallery-info {
+  flex: 1;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 10px 0;
+}
+.gallery-info-category {
+  font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--warm-gold); margin-bottom: 8px;
+}
+.gallery-info-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 3vw, 34px); font-weight: 700;
+  color: var(--champagne); line-height: 1.2; margin-bottom: 12px;
+}
+.gallery-info-title .hi {
+  background: linear-gradient(135deg, var(--gold-light), var(--warm-gold), var(--gold-dark));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.gallery-info-desc {
+  font-size: 13px; font-weight: 300; line-height: 1.8;
+  color: rgba(255,255,255,0.4); margin-bottom: 16px;
+}
+.gallery-info-features {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px;
+}
+.gallery-info-feat {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.5);
+}
+.gallery-info-feat .dot { color: var(--warm-gold); font-size: 6px; }
+.gallery-info-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 24px; border-radius: 25px;
+  background: linear-gradient(135deg, var(--warm-gold), var(--gold-dark));
+  color: var(--bg-dark); font-weight: 600;
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; width: fit-content;
+  transition: var(--transition);
+}
+.gallery-info-cta:hover { box-shadow: 0 8px 30px rgba(212,168,83,0.3); transform: translateY(-2px); }
+
+/* === FLOATING 1-LOOK SCENARIO === */
+#floatingLook {
+  position: fixed; bottom: 100px; right: 30px; z-index: 999;
+  width: 200px;
+  background: rgba(15,8,10,0.6);
+  backdrop-filter: blur(40px) saturate(150%);
+  -webkit-backdrop-filter: blur(40px) saturate(150%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: grab;
+  animation: floatLookIn 0.8s ease forwards;
+}
+@keyframes floatLookIn {
+  from { opacity: 0; transform: translateY(30px) scale(0.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+#floatingLook:hover { transform: translateY(-4px); box-shadow: 0 12px 50px rgba(212,168,83,0.12); }
+#floatingLook .look-visual {
+  width: 100%; height: 140px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 60px;
+  background: radial-gradient(circle at 30% 30%, rgba(212,168,83,0.06), transparent);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  position: relative;
+  overflow: hidden;
+}
+#floatingLook .look-visual::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(15,8,10,0.3), transparent);
+}
+#floatingLook .look-visual span { position: relative; z-index: 1; filter: drop-shadow(0 0 20px rgba(212,168,83,0.2)); }
+#floatingLook .look-content { padding: 12px 16px 14px; }
+#floatingLook .look-label { font-size: 9px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--warm-gold); }
+#floatingLook .look-title { font-size: 13px; font-weight: 500; color: var(--pearl-white); margin-top: 2px; font-family: 'Playfair Display', serif; }
+#floatingLook .look-close {
+  position: absolute; top: 8px; right: 8px; z-index: 2;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: rgba(0,0,0,0.4); backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--pearl-white); font-size: 12px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: var(--transition);
+}
+#floatingLook .look-close:hover { background: rgba(255,255,255,0.1); }
+#floatingLook .look-badge {
+  position: absolute; top: 10px; left: 10px; z-index: 2;
+  padding: 3px 10px; border-radius: 10px;
+  background: rgba(212,168,83,0.15); backdrop-filter: blur(10px);
+  border: 1px solid rgba(212,168,83,0.1);
+  font-size: 8px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--gold-light);
+}
+#floatingLook .look-ring {
+  position: absolute; inset: -3px; border-radius: 20px;
+  border: 1px solid rgba(212,168,83,0.06);
+  animation: ringSpin 20s linear infinite;
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  #floatingLook { width: 160px; bottom: 90px; right: 16px; }
+  #floatingLook .look-visual { height: 100px; font-size: 40px; }
+}
+
+/* === TESTIMONIALS === */
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.testimonial-card { padding: 30px 26px; border-radius: 18px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); }
+.testimonial-stars { color: var(--warm-gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 10px; }
+.testimonial-text { font-size: 13px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.45); font-style: italic; margin-bottom: 14px; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--rose-gold), var(--warm-gold)); display: flex; align-items: center; justify-content: center; font-size: 16px; color: var(--bg-dark); font-weight: 600; }
+.testimonial-name { font-size: 12px; font-weight: 500; color: var(--pearl-white); }
+.testimonial-role { font-size: 10px; font-weight: 300; color: rgba(255,255,255,0.25); }
+
+/* === CONTACT === */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.contact-info-grid { display: grid; gap: 12px; }
+.contact-item { display: flex; align-items: center; gap: 16px; padding: 20px 24px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); border-radius: 16px; text-decoration: none; color: inherit; transition: var(--transition); }
+.contact-item:hover { background: rgba(212,168,83,0.04); border-color: rgba(212,168,83,0.1); transform: translateX(4px); }
+.contact-icon-wrap { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; background: rgba(212,168,83,0.06); flex-shrink: 0; border: 1px solid rgba(212,168,83,0.06); }
+.contact-item-label { font-size: 10px; font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase; color: var(--rose-gold); opacity: 0.6; }
+.contact-item-value { font-size: 14px; font-weight: 500; color: var(--pearl-white); margin-top: 2px; }
+.contact-item-value a { color: var(--champagne); text-decoration: none; }
+
+/* === BOOKING FORM - Sends to Gmail === */
+.booking-form { padding: 36px 32px; }
+.booking-form h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; color: var(--champagne); margin-bottom: 22px; text-align: center; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 6px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; color: var(--pearl-white); outline: none; transition: var(--transition); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--warm-gold); box-shadow: 0 0 0 4px rgba(212,168,83,0.06); background: rgba(255,255,255,0.05); }
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.12); }
+.form-group select { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='rgba(255,255,255,0.3)' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+.form-group select option { background: #1a0f12; color: var(--pearl-white); }
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-submit { width: 100%; padding: 15px; border-radius: 30px; background: linear-gradient(135deg, var(--warm-gold), var(--gold-dark)); color: var(--bg-dark); font-weight: 600; font-family: 'Montserrat', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; border: none; cursor: pointer; transition: var(--transition); margin-top: 8px; box-shadow: 0 4px 20px rgba(212,168,83,0.15); }
+.form-submit:hover { box-shadow: 0 8px 35px rgba(212,168,83,0.3); transform: translateY(-2px); }
+.form-message { font-size: 12px; text-align: center; margin-top: 12px; padding: 12px; border-radius: 12px; display: none; }
+.form-message.success { display: block; background: rgba(212,168,83,0.06); border: 1px solid rgba(212,168,83,0.1); color: var(--gold-light); }
+.form-message.error { display: block; background: rgba(232,180,184,0.06); border: 1px solid rgba(232,180,184,0.1); color: var(--rose-gold); }
+
+/* === BADGES === */
+.badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 12px; }
+.badge { padding: 6px 18px; border-radius: 20px; border: 1px solid rgba(212,168,83,0.06); font-size: 9px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: var(--champagne); background: rgba(212,168,83,0.03); transition: var(--transition); }
+.badge:hover { background: rgba(212,168,83,0.06); border-color: rgba(212,168,83,0.15); }
+
+/* === FOOTER === */
+footer { position: relative; z-index: 1; border-top: 1px solid rgba(255,255,255,0.04); padding: 44px 28px 28px; text-align: center; }
+.footer-brand { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; background: linear-gradient(135deg, var(--gold-light), var(--warm-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 2px; }
+.footer-text { font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.15); margin-top: 8px; letter-spacing: 1px; }
+.footer-links { display: flex; justify-content: center; gap: 24px; margin-top: 14px; flex-wrap: wrap; }
+.footer-links a { color: rgba(255,255,255,0.15); text-decoration: none; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; transition: var(--transition); }
+.footer-links a:hover { color: var(--warm-gold); }
+
+/* === SCROLL TOP === */
+#scrollTop { position: fixed; bottom: 30px; right: 30px; z-index: 999; width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, var(--warm-gold), var(--gold-dark)); backdrop-filter: blur(20px); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--bg-dark); opacity: 0; visibility: hidden; transform: translateY(20px); transition: var(--transition); box-shadow: 0 4px 20px rgba(212,168,83,0.15); }
+#scrollTop.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+#scrollTop:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(212,168,83,0.25); }
+
+/* === WHATSAPP === */
+#whatsappFloat { position: fixed; bottom: 30px; left: 30px; z-index: 999; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #25D366, #1da851); display: flex; align-items: center; justify-content: center; font-size: 28px; text-decoration: none; box-shadow: 0 4px 25px rgba(37,211,102,0.25); transition: var(--transition); animation: waPulse 2.5s ease-in-out infinite; }
+@keyframes waPulse { 0%, 100% { box-shadow: 0 4px 25px rgba(37,211,102,0.25); } 50% { box-shadow: 0 4px 40px rgba(37,211,102,0.4); } }
+#whatsappFloat:hover { transform: scale(1.1); }
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+  .hero-left { text-align: center; }
+  .hero-desc { margin-left: auto; margin-right: auto; }
+  .hero-taglines { justify-content: center; }
+  .hero-buttons { justify-content: center; }
+  .hero-right { order: -1; }
+  .hero-portrait { width: 240px; height: 300px; }
+  .hero-ring:nth-child(1) { width: 320px; height: 320px; }
+  .hero-ring:nth-child(2) { width: 360px; height: 360px; }
+  .hero-ring:nth-child(3) { width: 280px; height: 280px; }
+  .about-grid { grid-template-columns: 1fr; gap: 30px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .gallery-layout { flex-direction: column; }
+  .gallery-collage { min-height: 240px; grid-template-columns: repeat(2, 1fr); }
+  .gallery-info { padding: 0; }
+  .form-row { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .booking-form { padding: 28px 20px; }
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: rgba(15,8,10,0.92); backdrop-filter: blur(60px); -webkit-backdrop-filter: blur(60px); padding: 16px; border-bottom: 1px solid rgba(255,255,255,0.04); gap: 2px; }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px 14px; font-size: 12px; }
+  .nav-toggle { display: flex; }
+  .section { padding: 80px 16px 50px; }
+  .hero { padding: 90px 16px 40px; }
+  .hero-brand { font-size: clamp(32px, 10vw, 42px); }
+  .hero-subtitle { font-size: 14px; letter-spacing: 5px; }
+  .hero-desc { font-size: 12px; }
+  .hero-tagline { font-size: 10px; }
+  .btn { padding: 12px 24px; font-size: 10px; width: 100%; justify-content: center; }
+  .about-stat-num { font-size: 22px; }
+  .about-text h3 { font-size: 20px; }
+  .about-text p { font-size: 12px; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .offers-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card { padding: 20px 12px; }
+  .section-title { font-size: 24px; }
+  .contact-item { padding: 16px 18px; }
+  .contact-item-value { font-size: 13px; }
+  .badge { font-size: 8px; padding: 5px 14px; }
+  .gallery-info-title { font-size: 22px; }
+  .gallery-info-desc { font-size: 12px; }
+  .gallery-info-features { grid-template-columns: 1fr; }
+  .testimonial-card { padding: 24px 20px !important; }
+  .form-submit { font-size: 11px; padding: 13px; }
+  #scrollTop { width: 40px; height: 40px; bottom: 20px; right: 16px; font-size: 16px; }
+  #whatsappFloat { width: 48px; height: 48px; bottom: 20px; left: 16px; font-size: 24px; }
+  .footer-brand { font-size: 18px; }
+  .footer-links { gap: 16px; }
+  .footer-links a { font-size: 9px; }
+}
+@media (max-width: 400px) {
+  .hero-portrait { width: 180px; height: 230px; }
+  .hero-ring:nth-child(1) { width: 240px; height: 240px; }
+  .hero-ring:nth-child(2) { width: 270px; height: 270px; }
+  .hero-ring:nth-child(3) { width: 210px; height: 210px; }
+  .gallery-collage { grid-template-columns: repeat(2, 1fr); gap: 5px; }
+  .about-circle { width: 220px; height: 220px; }
+  .about-circle-inner { width: 180px; height: 180px; }
+  .services-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .section { padding: 60px 12px 40px; }
+  .hero { padding: 80px 12px 30px; }
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-logo">DHANSHREE MAKEOVER</div>
+  <div class="preloader-sub">Luxury Beauty Studio</div>
+  <div class="preloader-bar-outer"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
+</div>
+
+<!-- BACKGROUND -->
+<div class="bg-layer">
+  <div class="bg-orb"></div><div class="bg-orb"></div><div class="bg-orb"></div><div class="bg-orb"></div>
+</div>
+
+<!-- PARTICLES -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- FLOATING DIAMONDS -->
+<div class="float-elements">
+  <div class="float-diamond"></div><div class="float-diamond"></div><div class="float-diamond"></div>
+  <div class="float-diamond"></div><div class="float-diamond"></div><div class="float-diamond"></div>
+  <div class="float-diamond"></div><div class="float-diamond"></div><div class="float-diamond"></div>
+  <div class="float-diamond"></div>
+</div>
+
+<!-- FLOATING 1-LOOK SCENARIO (Bridal Look of the Day) -->
+<div id="floatingLook">
+  <div class="look-ring"></div>
+  <span class="look-badge">&#x2728; Look of the Day</span>
+  <button class="look-close" id="closeFloatingLook" aria-label="Close">&#x2715;</button>
+  <div class="look-visual" style="overflow:hidden;">
+    <img src="images/bridal-main.jfif" alt="Featured Bridal" style="width:100%;height:100%;object-fit:contain;object-position:center;position:absolute;inset:0;padding:4px;">
+  </div>
+  <div class="look-content">
+    <div class="look-label">&#x1F451; Featured Bridal</div>
+    <div class="look-title">Royal Bridal Makeover</div>
+    <div style="font-size:10px;color:rgba(255,255,255,0.3);margin-top:4px;">HD Makeup &bull; Premium Hairstyling</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <img src="images/logo-white.png" alt="Dhanshree Makeover" class="nav-logo-img">
+    <span class="nav-logo-text">DHANSHREE <small>MAKEOVER</small></span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#offers">Offers</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-grid">
+    <div class="hero-left reveal visible">
+
+      <h1 class="hero-brand">DHANSHREE<br>MAKEOVER</h1>
+      <p class="hero-subtitle">Luxury Beauty Studio</p>
+      <p class="hero-desc">Vaijapur's premium bridal makeup destination. We transform beauty into confidence with luxury bridal artistry and flawless elegance.</p>
+      <div class="hero-taglines">
+        <span class="hero-tagline">&#x2728; Luxury Lifestyle Beauty Experience</span>
+        <span class="hero-tagline">&#x2728; Where Beauty Meets Perfection</span>
+        <span class="hero-tagline">&#x2728; Vaijapur's Premium Bridal Studio</span>
+      </div>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">&#x1F48D; Book Appointment</a>
+        <a href="#services" class="btn btn-outline">Explore Services</a>
+      </div>
+    </div>
+    <div class="hero-right reveal visible reveal-d2">
+      <div class="hero-ring"></div>
+      <div class="hero-ring"></div>
+      <div class="hero-ring"></div>
+      <div class="hero-portrait">
+        <div class="portrait-glow"></div>
+        <img class="portrait-img" src="images/bridal-main.jfif" alt="Bridal Makeover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-header reveal">
+    <p class="section-label">About Us</p>
+    <h2 class="section-title">Luxury <span class="highlight">Bridal Artistry</span></h2>
+    <p class="section-sub">Transforming beauty into confidence with every brushstroke</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="about-circle">
+          <div class="about-circle-inner"><img class="bridal-icon" src="images/own-about-bridal.jpg" alt="Bridal"></div>
+      </div>
+    </div>
+    <div class="about-text reveal reveal-d2">
+      <h3>The Art of Luxury Beauty</h3>
+      <p>Welcome to Dhanshree Makeover, Vaijapur's premier luxury bridal makeup studio. With a passion for perfection and an eye for elegance, we specialize in creating breathtaking bridal looks that radiate confidence and sophistication.</p>
+      <p>Every bride deserves to feel like royalty on her special day. Our expert makeup artists use premium products, advanced techniques, and personalized approaches to ensure each look is uniquely tailored to your beauty.</p>
+      <div class="about-stats">
+        <div class="about-stat"><div class="about-stat-num">49+</div><div class="about-stat-label">Happy Brides</div></div>
+        <div class="about-stat"><div class="about-stat-num">4+</div><div class="about-stat-label">Years Experience</div></div>
+        <div class="about-stat"><div class="about-stat-num">50+</div><div class="about-stat-label">Services</div></div>
+        <div class="about-stat"><div class="about-stat-num">5&#x2B50;</div><div class="about-stat-label">Rating</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="section-header reveal">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Premium <span class="highlight">Services</span></h2>
+    <p class="section-sub">Comprehensive beauty solutions for your special day</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal"><span class="service-icon">&#x1F484;</span><div class="service-name">Bridal Makeup</div><div class="service-desc">Traditional & modern bridal looks</div></div>
+    <div class="service-card reveal reveal-d1"><span class="service-icon">&#x1F451;</span><div class="service-name">HD Makeup</div><div class="service-desc">High-definition flawless finish</div></div>
+    <div class="service-card reveal reveal-d2"><span class="service-icon">&#x2728;</span><div class="service-name">Airbrush Makeup</div><div class="service-desc">Lightweight, long-lasting</div></div>
+    <div class="service-card reveal reveal-d3"><span class="service-icon">&#x1F48D;</span><div class="service-name">Engagement Makeup</div><div class="service-desc">Celebrate your love story</div></div>
+    <div class="service-card reveal reveal-d4"><span class="service-icon">&#x1F490;</span><div class="service-name">Reception Makeup</div><div class="service-desc">Glamorous evening looks</div></div>
+    <div class="service-card reveal reveal-d1"><span class="service-icon">&#x1F389;</span><div class="service-name">Party Makeup</div><div class="service-desc">Stand out at every event</div></div>
+    <div class="service-card reveal reveal-d2"><span class="service-icon">&#x1F487;&#x200D;&#x2640;&#xFE0F;</span><div class="service-name">Hairstyling</div><div class="service-desc">Professional hair artistry</div></div>
+    <div class="service-card reveal reveal-d3"><span class="service-icon">&#x1F457;</span><div class="service-name">Saree Draping</div><div class="service-desc">Elegant traditional drapes</div></div>
+    <div class="service-card reveal reveal-d4"><span class="service-icon">&#x1F9D0;</span><div class="service-name">Beauty Consultation</div><div class="service-desc">Personalized beauty advice</div></div>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section id="offers" class="section">
+  <div class="section-header reveal">
+    <p class="section-label">Special Offers</p>
+    <h2 class="section-title">Exclusive <span class="highlight">Packages</span></h2>
+    <p class="section-sub">Premium beauty experiences at exceptional value</p>
+  </div>
+  <div class="offers-grid">
+    <div class="offer-card reveal"><span class="offer-icon">&#x1F389;</span><div class="offer-name">Bridal Packages Available</div><span class="offer-badge">Starting &#x20B9; 9999</span></div>
+    <div class="offer-card reveal reveal-d1"><span class="offer-icon">&#x1F4C5;</span><div class="offer-name">Advance Booking Open</div><span class="offer-badge">Book Now</span></div>
+    <div class="offer-card reveal reveal-d2"><span class="offer-icon">&#x1F3C6;</span><div class="offer-name">Festival Special Offers</div><span class="offer-badge">Limited Time</span></div>
+    <div class="offer-card reveal reveal-d3"><span class="offer-icon">&#x1F3A8;</span><div class="offer-name">Customized Beauty Plans</div><span class="offer-badge">Tailored For You</span></div>
+    <div class="offer-card reveal reveal-d4"><span class="offer-icon">&#x2728;</span><div class="offer-name">Premium Bridal Trial</div><span class="offer-badge">Book Trial</span></div>
+  </div>
+</section>
+
+<!-- GALLERY - Collage + Text Side-by-Side -->
+<section id="gallery" class="section">
+  <div class="section-header reveal">
+    <p class="section-label">Our Gallery</p>
+    <h2 class="section-title">Bridal <span class="highlight">Moments</span></h2>
+    <p class="section-sub">Explore our work by category</p>
+  </div>
+
+  <div class="gallery-tabs reveal" id="galleryTabs">
+    <button class="gallery-tab active" data-category="bridal">&#x1F470; Bridal</button>
+    <button class="gallery-tab" data-category="hd">&#x1F484; HD Makeup</button>
+    <button class="gallery-tab" data-category="engagement">&#x1F48D; Engagement</button>
+    <button class="gallery-tab" data-category="hairstyling">&#x1F487; Hairstyling</button>
+    <button class="gallery-tab" data-category="saree">&#x1F457; Saree</button>
+  </div>
+
+  <div class="gallery-layout reveal" id="galleryLayout">
+
+    <!-- LEFT: COLLAGE -->
+    <div class="gallery-collage" id="galleryCollage">
+
+      <!-- Bridal collage -->
+      <div class="gallery-item ios-glass-card" data-category="bridal">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/bridal-main.jfif" alt="South Indian Bridal"></div>
+        <div class="gallery-overlay"><span>South Indian Bridal</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card" data-category="bridal">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/bridal-2.jfif" alt="Royal Bridal"></div>
+        <div class="gallery-overlay"><span>Royal Bridal</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card" data-category="bridal">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/bridal-3.jfif" alt="Bridal Glow"></div>
+        <div class="gallery-overlay"><span>Bridal Glow</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card" data-category="bridal">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/bridal-4.jfif" alt="Bridal Jewelry"></div>
+        <div class="gallery-overlay"><span>Bridal Jewelry</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card" data-category="bridal">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-bridal-1.jpg" alt="Bridal Flowers"></div>
+        <div class="gallery-overlay"><span>Bridal Flowers</span></div>
+      </div>
+
+      <!-- HD Makeup collage -->
+      <div class="gallery-item ios-glass-card hidden" data-category="hd">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-hd-1.jpg" alt="HD Glam Makeup"></div>
+        <div class="gallery-overlay"><span>HD Glam Makeup</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="hd">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-hd-2.jpg" alt="Airbrush Finish"></div>
+        <div class="gallery-overlay"><span>Airbrush Finish</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="hd">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-hd-3.jpg" alt="Perfect Base"></div>
+        <div class="gallery-overlay"><span>Perfect Base</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="hd">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-hd-4.jpg" alt="Star Look"></div>
+        <div class="gallery-overlay"><span>Star Look</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="hd">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-hd-5.jpg" alt="Artistry"></div>
+        <div class="gallery-overlay"><span>Artistry</span></div>
+      </div>
+
+      <!-- Engagement collage -->
+      <div class="gallery-item ios-glass-card hidden" data-category="engagement">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-engage-1.jpg" alt="Engagement Glow"></div>
+        <div class="gallery-overlay"><span>Engagement Glow</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="engagement">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-engage-2.jpg" alt="Reception Look"></div>
+        <div class="gallery-overlay"><span>Reception Look</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="engagement">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-engage-3.jpg" alt="Celebration"></div>
+        <div class="gallery-overlay"><span>Celebration</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="engagement">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-engage-4.jpg" alt="Special Moment"></div>
+        <div class="gallery-overlay"><span>Special Moment</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="engagement">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-engage-5.jpg" alt="Love & Glow"></div>
+        <div class="gallery-overlay"><span>Love & Glow</span></div>
+      </div>
+
+      <!-- Hairstyling collage -->
+      <div class="gallery-item ios-glass-card hidden" data-category="hairstyling">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-hair-1.jpg" alt="Bridal Hairstyling"></div>
+        <div class="gallery-overlay"><span>Bridal Hairstyling</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="hairstyling">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-hair-2.jpg" alt="Traditional Bun"></div>
+        <div class="gallery-overlay"><span>Traditional Bun</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="hairstyling">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-hair-3.jpg" alt="Hair Jewelry"></div>
+        <div class="gallery-overlay"><span>Hair Jewelry</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="hairstyling">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-hair-4.jpg" alt="Modern Style"></div>
+        <div class="gallery-overlay"><span>Modern Style</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="hairstyling">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-hair-5.jpg" alt="Braided Elegance"></div>
+        <div class="gallery-overlay"><span>Braided Elegance</span></div>
+      </div>
+
+      <!-- Saree collage -->
+      <div class="gallery-item ios-glass-card hidden" data-category="saree">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-saree-main.jpg" alt="Trending Wedding Saree"></div>
+        <div class="gallery-overlay"><span>Trending Wedding Saree</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="saree">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-saree-1.jpg" alt="Elegant Draping"></div>
+        <div class="gallery-overlay"><span>Elegant Draping</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="saree">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-saree-2.jpg" alt="Traditional Wear"></div>
+        <div class="gallery-overlay"><span>Traditional Wear</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="saree">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-saree-3.jpg" alt="South Indian Look"></div>
+        <div class="gallery-overlay"><span>South Indian Look</span></div>
+      </div>
+      <div class="gallery-item ios-glass-card hidden" data-category="saree">
+        <div class="gallery-visual-bg"></div><div class="gallery-visual"><img src="images/own-saree-4.jpg" alt="Silk & Glow"></div>
+        <div class="gallery-overlay"><span>Silk & Glow</span></div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: TEXT PANEL -->
+    <div class="gallery-info" id="galleryInfo">
+      <div class="gallery-info-category" id="gInfoCat">&#x1F470; Bridal Makeup</div>
+      <h3 class="gallery-info-title" id="gInfoTitle">Royal <span class="hi">Bridal</span> Elegance</h3>
+      <p class="gallery-info-desc" id="gInfoDesc">Traditional meets modern in our signature bridal makeup. Each look is meticulously crafted to enhance your natural beauty, using premium products and advanced techniques for a flawless, camera-ready finish that lasts all day.</p>
+      <div class="gallery-info-features" id="gInfoFeats">
+        <span class="gallery-info-feat"><span class="dot">&#x25CF;</span> Premium HD Products</span>
+        <span class="gallery-info-feat"><span class="dot">&#x25CF;</span> Long-lasting Finish</span>
+        <span class="gallery-info-feat"><span class="dot">&#x25CF;</span> Customized Look</span>
+        <span class="gallery-info-feat"><span class="dot">&#x25CF;</span> Trial Sessions</span>
+      </div>
+      <a href="#contact" class="gallery-info-cta">&#x1F48D; Book This Look</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section">
+  <div class="section-header reveal">
+    <p class="section-label">Client Love</p>
+    <h2 class="section-title">What Our <span class="highlight">Brides Say</span></h2>
+    <p class="section-sub">Real reviews from our happy clients</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card ios-glass-card reveal" style="padding:30px 26px;">
+      <div class="testimonial-stars">&#x2B50; &#x2B50; &#x2B50; &#x2B50; &#x2B50;</div>
+      <p class="testimonial-text">"Absolutely stunning bridal makeup! Dhanshree made me feel like a queen on my wedding day. The professionalism and attention to detail were incredible."</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">P</div><div><div class="testimonial-name">Priya S.</div><div class="testimonial-role">Bridal Makeup</div></div></div>
+    </div>
+    <div class="testimonial-card ios-glass-card reveal reveal-d2" style="padding:30px 26px;">
+      <div class="testimonial-stars">&#x2B50; &#x2B50; &#x2B50; &#x2B50; &#x2B50;</div>
+      <p class="testimonial-text">"The best makeup artist in Vaijapur! My engagement look was flawless and the makeup lasted all night. Highly recommended for every bride!"</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">R</div><div><div class="testimonial-name">Ritu M.</div><div class="testimonial-role">Engagement Makeup</div></div></div>
+    </div>
+    <div class="testimonial-card ios-glass-card reveal reveal-d4" style="padding:30px 26px;">
+      <div class="testimonial-stars">&#x2B50; &#x2B50; &#x2B50; &#x2B50; &#x2B50;</div>
+      <p class="testimonial-text">"Dhanshree is a true artist! She understood exactly what I wanted and delivered beyond expectations. The HD makeup was picture-perfect."</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">N</div><div><div class="testimonial-name">Neha K.</div><div class="testimonial-role">HD Makeup</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="section-header reveal">
+    <p class="section-label">Get In Touch</p>
+    <h2 class="section-title">Book Your <span class="highlight">Appointment</span></h2>
+    <p class="section-sub">Let's create your perfect look together</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info-grid reveal">
+      <a href="tel:+919112398977" class="contact-item ios-glass-card">
+        <div class="contact-icon-wrap">&#x1F4DE;</div>
+        <div><div class="contact-item-label">Call / WhatsApp</div><div class="contact-item-value">9112398977</div></div>
+      </a>
+      <a href="mailto:sweetybidway@gmail.com" class="contact-item ios-glass-card">
+        <div class="contact-icon-wrap">&#x2709;&#xFE0F;</div>
+        <div><div class="contact-item-label">Email</div><div class="contact-item-value">sweetybidway@gmail.com</div></div>
+      </a>
+      <a href="https://maps.google.com/?q=Vaijapur+Maharashtra" target="_blank" class="contact-item ios-glass-card">
+        <div class="contact-icon-wrap">&#x1F4CD;</div>
+        <div><div class="contact-item-label">Location</div><div class="contact-item-value">Vaijapur, Maharashtra</div></div>
+      </a>
+      <div class="badges">
+        <span class="badge">&#x2714; Professional Makeup Artist</span>
+        <span class="badge">&#x2714; Bridal Specialist</span>
+        <span class="badge">&#x2714; Premium Experience</span>
+        <span class="badge">&#x2714; Trusted By Happy Clients</span>
+        <span class="badge">&#x2714; Luxury Beauty Destination</span>
+      </div>
+    </div>
+    <div class="booking-form ios-glass reveal reveal-d2">
+      <h3>Book Your Appointment</h3>
+      <p style="text-align:center;font-size:11px;color:rgba(255,255,255,0.3);margin-bottom:18px;">&#x1F4AC; Details sent via WhatsApp to 9112398977</p>
+      <form id="bookingForm" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label>Your Name</label><input type="text" id="formName" placeholder="Enter your name" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" id="formPhone" placeholder="Enter phone number" required></div>
+        </div>
+        <div class="form-group"><label>Email</label><input type="email" id="formEmail" placeholder="Enter your email"></div>
+        <div class="form-row">
+          <div class="form-group"><label>Service Required</label>
+            <select id="formService">
+              <option>Bridal Makeup</option><option>HD Makeup</option><option>Airbrush Makeup</option>
+              <option>Engagement Makeup</option><option>Reception Makeup</option><option>Party Makeup</option>
+              <option>Hairstyling</option><option>Saree Draping</option><option>Beauty Consultation</option><option>Bridal Package</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Preferred Date</label><input type="date" id="formDate"></div>
+        </div>
+        <div class="form-group"><label>Message</label><textarea id="formMessage" placeholder="Tell us about your requirements..."></textarea></div>
+        <button type="submit" class="form-submit">&#x1F4AC; Send via WhatsApp</button>
+        <div id="formFeedback" class="form-message"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section style="padding:10px 28px 30px;max-width:1100px;margin:0 auto;position:relative;z-index:1;">
+  <div class="badges" style="gap:8px;">
+    <span class="badge" style="font-size:10px;padding:8px 22px;">&#x2714; Professional Makeup Artist</span>
+    <span class="badge" style="font-size:10px;padding:8px 22px;">&#x2714; Bridal Specialist</span>
+    <span class="badge" style="font-size:10px;padding:8px 22px;">&#x2714; Premium Beauty Experience</span>
+    <span class="badge" style="font-size:10px;padding:8px 22px;">&#x2714; Trusted By Happy Clients</span>
+    <span class="badge" style="font-size:10px;padding:8px 22px;">&#x2714; Luxury Beauty Destination</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">DHANSHREE MAKEOVER</div>
+  <p class="footer-text">Luxury Beauty Studio &bull; Vaijapur, Maharashtra</p>
+  <p class="footer-text" style="font-size:10px;margin-top:4px;">&#x1F4DE; 9112398977 &bull; &#x2709; sweetybidway@gmail.com</p>
+  <div class="footer-links">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+    <a href="#offers">Offers</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  </div>
+  <p class="footer-text" style="margin-top:16px;font-size:9px;">&copy; 2026 Dhanshree Makeover. All rights reserved.</p>
+</footer>
+
+<button id="scrollTop" aria-label="Scroll to top">&#x2191;</button>
+<a id="whatsappFloat" href="https://wa.me/919112398977" target="_blank" aria-label="WhatsApp">&#x1F4AC;</a>
+
+<script>
+// ===== PRELOADER =====
+(function() {
+  const fill = document.getElementById('preloaderFill');
+  const preloader = document.getElementById('preloader');
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress += Math.random() * 12 + 5;
+    if (progress > 100) progress = 100;
+    fill.style.width = progress + '%';
+    if (progress >= 100) { clearInterval(interval); setTimeout(() => preloader.classList.add('hidden'), 400); }
+  }, 100);
+})();
+
+// ===== PARTICLES =====
+(function() {
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  let w, h, particles = [];
+  function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
+  resize(); window.addEventListener('resize', resize);
+  class P { constructor() { this.reset(); } reset() { this.x = Math.random() * w; this.y = Math.random() * h; this.size = Math.random() * 2 + 0.5; this.sx = (Math.random() - 0.5) * 0.25; this.sy = -Math.random() * 0.35 - 0.1; this.o = Math.random() * 0.4 + 0.1; this.c = ['rgba(212,168,83,','rgba(232,180,184,','rgba(255,255,255,','rgba(240,214,138,'][Math.floor(Math.random()*4)]; } update() { this.x += this.sx; this.y += this.sy; if (this.y < -10 || this.x < -10 || this.x > w + 10) { this.y = h + 10; this.x = Math.random() * w; } } draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fillStyle = this.c + this.o + ')'; ctx.fill(); } }
+  for (let i = 0; i < 100; i++) particles.push(new P());
+  function animate() { ctx.clearRect(0, 0, w, h); particles.forEach(p => { p.update(); p.draw(); }); for (let i = 0; i < particles.length; i++) { for (let j = i + 1; j < particles.length; j++) { const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y, dist = Math.sqrt(dx*dx + dy*dy); if (dist < 140) { ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.strokeStyle = 'rgba(212,168,83,' + (0.04 * (1 - dist/140)) + ')'; ctx.lineWidth = 0.5; ctx.stroke(); } } } requestAnimationFrame(animate); }
+  animate();
+})();
+
+// ===== NAV =====
+const nav = document.getElementById('navbar');
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => { navToggle.classList.toggle('open'); navLinks.classList.toggle('open'); });
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); }));
+const sections = document.querySelectorAll('section[id], .hero');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+  let current = '';
+  sections.forEach(s => { const t = s.offsetTop - 120; if (window.scrollY >= t) current = s.id || 'home'; });
+  navLinks.querySelectorAll('a').forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+});
+
+// ===== SCROLL REVEAL =====
+const revealObserver = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ===== SCROLL TOP =====
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => { scrollTopBtn.classList.toggle('visible', window.scrollY > 500); });
+scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ===== GALLERY TABS - Collage + Text =====
+const galleryData = {
+  bridal: {
+    cat: '&#x1F470; Bridal Makeup',
+    title: 'Royal <span class="hi">Bridal</span> Elegance',
+    desc: 'Traditional meets modern in our signature bridal makeup. Each look is meticulously crafted to enhance your natural beauty, using premium products and advanced techniques for a flawless, camera-ready finish that lasts all day.',
+    feats: ['Premium HD Products', 'Long-lasting Finish', 'Customized Look', 'Trial Sessions']
+  },
+  hd: {
+    cat: '&#x1F484; HD & Airbrush Makeup',
+    title: 'Flawless <span class="hi">HD</span> Finish',
+    desc: 'High-definition makeup that looks impeccable in every frame. Our airbrush technique provides a lightweight, breathable finish with full coverage — perfect for bridal photography, videos, and close-up moments.',
+    feats: ['Ultra HD Coverage', 'Breathable & Lightweight', 'Photography Ready', 'All-day Wear']
+  },
+  engagement: {
+    cat: '&#x1F48D; Engagement & Reception',
+    title: '<span class="hi">Celebrate</span> in Style',
+    desc: 'Glamorous looks for your engagement, reception, and pre-wedding festivities. From soft romantic to bold glam, we create the perfect style that matches your outfit, jewelry, and the occasion\'s vibe.',
+    feats: ['Custom Theme Looks', 'Jewelry Coordination', 'Photography Friendly', 'Quick Touch-ups']
+  },
+  hairstyling: {
+    cat: '&#x1F487; Professional Hairstyling',
+    title: '<span class="hi">Crown</span> of Beauty',
+    desc: 'Expert hairstyling that completes your bridal look. From traditional buns adorned with flowers to modern blow-dries and elegant updos — our stylists craft the perfect hair design to complement your face shape and outfit.',
+    feats: ['Traditional & Modern', 'Hair Jewelry Setup', 'Trial Available', 'Long-hold Styling']
+  },
+  saree: {
+    cat: '&#x1F457; Saree Draping',
+    title: 'Elegant <span class="hi">Saree</span> Draping',
+    desc: 'Professional saree draping that enhances your silhouette. Whether you prefer the classic Nivi style, Bengali drape, or modern lehenga-saree fusion, our experts ensure perfect pleats, pallu placement, and all-day comfort.',
+    feats: ['Multiple Draping Styles', 'Perfect Pleats Guarantee', 'Fabric Specialists', 'Comfort Fit']
+  }
+};
+
+const gTabs = document.querySelectorAll('.gallery-tab');
+const gItems = document.querySelectorAll('.gallery-collage .gallery-item');
+const gInfoCat = document.getElementById('gInfoCat');
+const gInfoTitle = document.getElementById('gInfoTitle');
+const gInfoDesc = document.getElementById('gInfoDesc');
+const gInfoFeats = document.getElementById('gInfoFeats');
+
+// Touch support for gallery overlays (mobile)
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', function() {
+    if ('ontouchstart' in window) {
+      const was = this.classList.contains('touched');
+      document.querySelectorAll('.gallery-item.touched').forEach(el => el.classList.remove('touched'));
+      if (!was) this.classList.add('touched');
+    }
+  });
+});
+
+gTabs.forEach(tab => {
+  tab.addEventListener('click', function() {
+    gTabs.forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+    const cat = this.dataset.category;
+    gItems.forEach(item => {
+      item.classList.toggle('hidden', item.dataset.category !== cat);
+    });
+    const data = galleryData[cat];
+    if (data) {
+      gInfoCat.innerHTML = data.cat;
+      gInfoTitle.innerHTML = data.title;
+      gInfoDesc.textContent = data.desc;
+      gInfoFeats.innerHTML = data.feats.map(f => '<span class="gallery-info-feat"><span class="dot">&#x25CF;</span> ' + f + '</span>').join('');
+    }
+  });
+});
+
+// ===== FLOATING LOOK CLOSE =====
+document.getElementById('closeFloatingLook').addEventListener('click', () => {
+  const fl = document.getElementById('floatingLook');
+  fl.style.opacity = '0';
+  fl.style.transform = 'scale(0.8)';
+  setTimeout(() => { fl.style.display = 'none'; }, 400);
+});
+
+// ===== BOOKING FORM - SENDS TO WHATSAPP =====
+const bookingForm = document.getElementById('bookingForm');
+const formFeedback = document.getElementById('formFeedback');
+
+bookingForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('formName').value.trim();
+  const phone = document.getElementById('formPhone').value.trim();
+  const email = document.getElementById('formEmail').value.trim();
+  const service = document.getElementById('formService').value;
+  const date = document.getElementById('formDate').value;
+  const msg = document.getElementById('formMessage').value.trim();
+
+  if (!name) { showFeedback('Please enter your name', 'error'); return; }
+  if (!phone || phone.length < 10) { showFeedback('Please enter a valid phone number', 'error'); return; }
+
+  const text = encodeURIComponent(
+    '*New Booking Enquiry* 🎀' +
+    '\nName: ' + name +
+    '\nPhone: ' + phone +
+    (email ? '\nEmail: ' + email : '') +
+    '\nService: ' + service +
+    (date ? '\nBooking Date: ' + date : '') +
+    (msg ? '\nMessage: ' + msg : '')
+  );
+
+  showFeedback('Opening WhatsApp...', 'success');
+
+  setTimeout(() => {
+    window.open('https://wa.me/919112398977?text=' + text, '_blank');
+    bookingForm.reset();
+    setTimeout(() => { formFeedback.className = 'form-message'; formFeedback.style.display = 'none'; }, 5000);
+  }, 600);
+});
+
+function showFeedback(text, type) {
+  formFeedback.textContent = text;
+  formFeedback.className = 'form-message ' + type;
+  formFeedback.style.display = 'block';
+}
+
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', function(e) { const h = this.getAttribute('href'); if (h === '#') return; e.preventDefault(); const t = document.querySelector(h); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); });
+</script>
+
+</body>
+</html>
